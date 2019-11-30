@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,36 @@ namespace UserMaintenance
             };
             users.Add(u);
 
+        }
+
+        private void btnWrite_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            sfd.InitialDirectory = Application.StartupPath;
+            sfd.Filter = "CSV file (*.csv)|*.csv| All Files (*.*)|*.*";
+            sfd.DefaultExt = "csv";
+
+            if (sfd.ShowDialog() != DialogResult.OK) return;
+
+
+            using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+            {
+
+                sw.WriteLine("ID; FullName");
+
+                foreach (User u in listUsers.Items)
+                {
+                sw.Write(u.ID.ToString());
+                sw.Write(";");
+                sw.Write(u.FullName);
+                sw.WriteLine();
+                }
+
+            }
+            MessageBox.Show("A fájlba írás megtörtént");
+
+            Application.Exit();
         }
     }
 }
