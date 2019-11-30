@@ -34,6 +34,8 @@ namespace UserMaintenance
             };
             users.Add(u);
 
+            txtFullName.Clear();
+
         }
 
         private void btnWrite_Click(object sender, EventArgs e)
@@ -64,6 +66,12 @@ namespace UserMaintenance
             MessageBox.Show("A fájlba írás megtörtént");
 
             Application.Exit();
+        }
+
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            users.Remove((User)listUsers.SelectedItem);
         }
     }
 }
