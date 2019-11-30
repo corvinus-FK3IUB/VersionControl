@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.listUsers = new System.Windows.Forms.ListBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
+            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.lblFullName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,37 +42,21 @@
             this.listUsers.Size = new System.Drawing.Size(193, 251);
             this.listUsers.TabIndex = 0;
             // 
-            // txtLastName
+            // txtFullName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(349, 43);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(168, 20);
-            this.txtLastName.TabIndex = 1;
+            this.txtFullName.Location = new System.Drawing.Point(349, 43);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(168, 20);
+            this.txtFullName.TabIndex = 1;
             // 
-            // txtFirstName
+            // lblFullName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(349, 83);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(168, 20);
-            this.txtFirstName.TabIndex = 2;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(275, 50);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(64, 13);
-            this.lblLastName.TabIndex = 3;
-            this.lblLastName.Text = "Vezetéknév";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(275, 90);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(60, 13);
-            this.lblFirstName.TabIndex = 4;
-            this.lblFirstName.Text = "Keresztnév";
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Location = new System.Drawing.Point(275, 50);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(27, 13);
+            this.lblFullName.TabIndex = 3;
+            this.lblFullName.Text = "Név";
             // 
             // btnAdd
             // 
@@ -92,10 +74,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 328);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.lblFullName);
+            this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.listUsers);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -107,10 +87,8 @@
         #endregion
 
         private System.Windows.Forms.ListBox listUsers;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.Button btnAdd;
     }
 }
